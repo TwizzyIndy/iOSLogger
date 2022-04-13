@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B63017EB28057B9F005E47A8 /* LogConsoleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63017EA28057B9F005E47A8 /* LogConsoleHelper.swift */; };
+		B63017EC28057B9F005E47A8 /* LogConsoleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63017EA28057B9F005E47A8 /* LogConsoleHelper.swift */; };
 		B6A24557280561A000490CD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A24556280561A000490CD3 /* AppDelegate.swift */; };
 		B6A24559280561A000490CD3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A24558280561A000490CD3 /* MainViewController.swift */; };
 		B6A2455C280561A000490CD3 /* iOSLogger.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B6A2455A280561A000490CD3 /* iOSLogger.xcdatamodeld */; };
@@ -37,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B63017EA28057B9F005E47A8 /* LogConsoleHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogConsoleHelper.swift; sourceTree = "<group>"; };
 		B6A24553280561A000490CD3 /* iOSLogger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSLogger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6A24556280561A000490CD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6A24558280561A000490CD3 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -173,6 +176,7 @@
 		B6A245892805623D00490CD3 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				B63017EA28057B9F005E47A8 /* LogConsoleHelper.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -328,6 +332,7 @@
 				B6A24559280561A000490CD3 /* MainViewController.swift in Sources */,
 				B6A2459128056A7100490CD3 /* SidebarMenu.swift in Sources */,
 				B6A24557280561A000490CD3 /* AppDelegate.swift in Sources */,
+				B63017EB28057B9F005E47A8 /* LogConsoleHelper.swift in Sources */,
 				B6A2458F28056A6400490CD3 /* SidebarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -336,6 +341,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B63017EC28057B9F005E47A8 /* LogConsoleHelper.swift in Sources */,
 				B6A2456C280561A000490CD3 /* iOSLoggerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
