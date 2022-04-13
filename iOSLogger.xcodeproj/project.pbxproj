@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		B63017EB28057B9F005E47A8 /* LogConsoleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63017EA28057B9F005E47A8 /* LogConsoleHelper.swift */; };
 		B63017EC28057B9F005E47A8 /* LogConsoleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63017EA28057B9F005E47A8 /* LogConsoleHelper.swift */; };
+		B63017EE28057F5A005E47A8 /* LogConsoleHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63017ED28057F5A005E47A8 /* LogConsoleHelperTests.swift */; };
+		B63017F12805832A005E47A8 /* TMobileDeviceConsole in Resources */ = {isa = PBXBuildFile; fileRef = B63017F02805832A005E47A8 /* TMobileDeviceConsole */; };
+		B63017F22805832A005E47A8 /* TMobileDeviceConsole in Resources */ = {isa = PBXBuildFile; fileRef = B63017F02805832A005E47A8 /* TMobileDeviceConsole */; };
+		B6A193EF2806C23B00CC44F4 /* LogLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A193EE2806C23B00CC44F4 /* LogLine.swift */; };
+		B6A193F02806C23B00CC44F4 /* LogLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A193EE2806C23B00CC44F4 /* LogLine.swift */; };
+		B6A193F22806CBCD00CC44F4 /* LogLineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A193F12806CBCD00CC44F4 /* LogLineTests.swift */; };
 		B6A24557280561A000490CD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A24556280561A000490CD3 /* AppDelegate.swift */; };
 		B6A24559280561A000490CD3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A24558280561A000490CD3 /* MainViewController.swift */; };
 		B6A2455C280561A000490CD3 /* iOSLogger.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B6A2455A280561A000490CD3 /* iOSLogger.xcdatamodeld */; };
@@ -19,6 +25,8 @@
 		B6A24578280561A000490CD3 /* iOSLoggerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A24577280561A000490CD3 /* iOSLoggerUITestsLaunchTests.swift */; };
 		B6A2458F28056A6400490CD3 /* SidebarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A2458E28056A6400490CD3 /* SidebarViewController.swift */; };
 		B6A2459128056A7100490CD3 /* SidebarMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A2459028056A7100490CD3 /* SidebarMenu.swift */; };
+		B6E43A032806D4A200659D9D /* LogMessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E43A022806D4A200659D9D /* LogMessageModel.swift */; };
+		B6E43A042806D4A200659D9D /* LogMessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E43A022806D4A200659D9D /* LogMessageModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +48,10 @@
 
 /* Begin PBXFileReference section */
 		B63017EA28057B9F005E47A8 /* LogConsoleHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogConsoleHelper.swift; sourceTree = "<group>"; };
+		B63017ED28057F5A005E47A8 /* LogConsoleHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogConsoleHelperTests.swift; sourceTree = "<group>"; };
+		B63017F02805832A005E47A8 /* TMobileDeviceConsole */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = TMobileDeviceConsole; sourceTree = "<group>"; };
+		B6A193EE2806C23B00CC44F4 /* LogLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogLine.swift; sourceTree = "<group>"; };
+		B6A193F12806CBCD00CC44F4 /* LogLineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogLineTests.swift; sourceTree = "<group>"; };
 		B6A24553280561A000490CD3 /* iOSLogger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSLogger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6A24556280561A000490CD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6A24558280561A000490CD3 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +66,7 @@
 		B6A24577280561A000490CD3 /* iOSLoggerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSLoggerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B6A2458E28056A6400490CD3 /* SidebarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidebarViewController.swift; sourceTree = "<group>"; };
 		B6A2459028056A7100490CD3 /* SidebarMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidebarMenu.swift; sourceTree = "<group>"; };
+		B6E43A022806D4A200659D9D /* LogMessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogMessageModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +94,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B63017EF280582EC005E47A8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B63017F02805832A005E47A8 /* TMobileDeviceConsole */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		B6A2454A280561A000490CD3 = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +125,7 @@
 		B6A24555280561A000490CD3 /* iOSLogger */ = {
 			isa = PBXGroup;
 			children = (
+				B63017EF280582EC005E47A8 /* Resources */,
 				B6A245892805623D00490CD3 /* Helper */,
 				B6A2458A2805625B00490CD3 /* Delegate */,
 				B6A24584280561F600490CD3 /* Screens */,
@@ -119,6 +141,8 @@
 			isa = PBXGroup;
 			children = (
 				B6A2456B280561A000490CD3 /* iOSLoggerTests.swift */,
+				B63017ED28057F5A005E47A8 /* LogConsoleHelperTests.swift */,
+				B6A193F12806CBCD00CC44F4 /* LogLineTests.swift */,
 			);
 			path = iOSLoggerTests;
 			sourceTree = "<group>";
@@ -162,6 +186,8 @@
 		B6A245872805622600490CD3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B6A193EE2806C23B00CC44F4 /* LogLine.swift */,
+				B6E43A022806D4A200659D9D /* LogMessageModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -304,6 +330,7 @@
 			files = (
 				B6A2455E280561A000490CD3 /* Assets.xcassets in Resources */,
 				B6A24561280561A000490CD3 /* Main.storyboard in Resources */,
+				B63017F12805832A005E47A8 /* TMobileDeviceConsole in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,6 +338,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B63017F22805832A005E47A8 /* TMobileDeviceConsole in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,7 +356,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6E43A032806D4A200659D9D /* LogMessageModel.swift in Sources */,
 				B6A2455C280561A000490CD3 /* iOSLogger.xcdatamodeld in Sources */,
+				B6A193EF2806C23B00CC44F4 /* LogLine.swift in Sources */,
 				B6A24559280561A000490CD3 /* MainViewController.swift in Sources */,
 				B6A2459128056A7100490CD3 /* SidebarMenu.swift in Sources */,
 				B6A24557280561A000490CD3 /* AppDelegate.swift in Sources */,
@@ -341,7 +371,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6E43A042806D4A200659D9D /* LogMessageModel.swift in Sources */,
+				B63017EE28057F5A005E47A8 /* LogConsoleHelperTests.swift in Sources */,
 				B63017EC28057B9F005E47A8 /* LogConsoleHelper.swift in Sources */,
+				B6A193F02806C23B00CC44F4 /* LogLine.swift in Sources */,
+				B6A193F22806CBCD00CC44F4 /* LogLineTests.swift in Sources */,
 				B6A2456C280561A000490CD3 /* iOSLoggerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
