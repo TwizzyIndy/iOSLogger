@@ -741,7 +741,7 @@
                                     <rect key="frame" x="1" y="1" width="635" height="502"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" multipleSelection="NO" autosaveColumns="NO" rowHeight="24" rowSizeStyle="automatic" headerView="JfL-Up-e4s" viewBased="YES" id="z4A-Y9-3st">
+                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" multipleSelection="NO" autosaveColumns="NO" rowHeight="24" usesAutomaticRowHeights="YES" headerView="JfL-Up-e4s" viewBased="YES" id="z4A-Y9-3st">
                                             <rect key="frame" x="0.0" y="0.0" width="635" height="474"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <size key="intercellSpacing" width="17" height="0.0"/>
@@ -828,16 +828,23 @@
                                                             <rect key="frame" x="166" y="0.0" width="336" height="24"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
-                                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SdJ-Zi-u2y">
+                                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="SdJ-Zi-u2y">
                                                                     <rect key="frame" x="0.0" y="4" width="336" height="16"/>
-                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="BUs-os-oqJ">
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="332" id="9E5-6m-8IC"/>
+                                                                    </constraints>
+                                                                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="Table View Cell" id="BUs-os-oqJ">
                                                                         <font key="font" usesAppearanceFont="YES"/>
                                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
                                                                 </textField>
                                                             </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="SdJ-Zi-u2y" firstAttribute="centerX" secondItem="q5d-UK-yUG" secondAttribute="centerX" id="hby-Jo-eb6"/>
+                                                                <constraint firstAttribute="bottom" secondItem="SdJ-Zi-u2y" secondAttribute="bottom" constant="4" id="kNf-JW-2a9"/>
+                                                                <constraint firstItem="SdJ-Zi-u2y" firstAttribute="top" secondItem="q5d-UK-yUG" secondAttribute="top" constant="4" id="lHy-9f-s81"/>
+                                                            </constraints>
                                                             <connections>
                                                                 <outlet property="textField" destination="SdJ-Zi-u2y" id="n86-Ju-ob7"/>
                                                             </connections>
