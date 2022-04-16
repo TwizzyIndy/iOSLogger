@@ -177,6 +177,15 @@ extension LogContentViewController: NSTableViewDelegate, NSTableViewDataSource {
         if let cell = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: cellIdentifier), owner: nil) as? NSTableCellView {
             cell.textField?.stringValue = text
             
+            // if stateOfSearch is in .regularSearch, then we would highlight the searching word
+            if self.stateOfSearch == .regularSearch {
+                let attributedText = NSMutableAttributedString(string: text)
+                let range = NSString(string: text).range(of: self.textToSearch, options: .caseInsensitive)
+                let highlightColor = NSColor.systemYellow
+                let highlightedAttributes : [NSAttributedString.Key: Any] = [NSAttributedString.Key.backgroundColor: highlightColor]
+                attributedText.addAttributes(highlightedAttributes, range: range)
+                cell.textField?.attributedStringValue = attributedText
+            }
             return cell
         }
         
