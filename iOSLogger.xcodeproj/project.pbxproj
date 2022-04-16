@@ -16,15 +16,13 @@
 		B6A193F02806C23B00CC44F4 /* LogLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A193EE2806C23B00CC44F4 /* LogLine.swift */; };
 		B6A193F22806CBCD00CC44F4 /* LogLineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A193F12806CBCD00CC44F4 /* LogLineTests.swift */; };
 		B6A24557280561A000490CD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A24556280561A000490CD3 /* AppDelegate.swift */; };
-		B6A24559280561A000490CD3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A24558280561A000490CD3 /* MainViewController.swift */; };
+		B6A24559280561A000490CD3 /* LogContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A24558280561A000490CD3 /* LogContentViewController.swift */; };
 		B6A2455C280561A000490CD3 /* iOSLogger.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B6A2455A280561A000490CD3 /* iOSLogger.xcdatamodeld */; };
 		B6A2455E280561A000490CD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6A2455D280561A000490CD3 /* Assets.xcassets */; };
 		B6A24561280561A000490CD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6A2455F280561A000490CD3 /* Main.storyboard */; };
 		B6A2456C280561A000490CD3 /* iOSLoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A2456B280561A000490CD3 /* iOSLoggerTests.swift */; };
 		B6A24576280561A000490CD3 /* iOSLoggerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A24575280561A000490CD3 /* iOSLoggerUITests.swift */; };
 		B6A24578280561A000490CD3 /* iOSLoggerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A24577280561A000490CD3 /* iOSLoggerUITestsLaunchTests.swift */; };
-		B6A2458F28056A6400490CD3 /* SidebarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A2458E28056A6400490CD3 /* SidebarViewController.swift */; };
-		B6A2459128056A7100490CD3 /* SidebarMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A2459028056A7100490CD3 /* SidebarMenu.swift */; };
 		B6E43A032806D4A200659D9D /* LogMessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E43A022806D4A200659D9D /* LogMessageModel.swift */; };
 		B6E43A042806D4A200659D9D /* LogMessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E43A022806D4A200659D9D /* LogMessageModel.swift */; };
 /* End PBXBuildFile section */
@@ -54,7 +52,7 @@
 		B6A193F12806CBCD00CC44F4 /* LogLineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogLineTests.swift; sourceTree = "<group>"; };
 		B6A24553280561A000490CD3 /* iOSLogger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSLogger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6A24556280561A000490CD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B6A24558280561A000490CD3 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		B6A24558280561A000490CD3 /* LogContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogContentViewController.swift; sourceTree = "<group>"; };
 		B6A2455B280561A000490CD3 /* iOSLogger.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iOSLogger.xcdatamodel; sourceTree = "<group>"; };
 		B6A2455D280561A000490CD3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B6A24560280561A000490CD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -64,8 +62,6 @@
 		B6A24571280561A000490CD3 /* iOSLoggerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSLoggerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6A24575280561A000490CD3 /* iOSLoggerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSLoggerUITests.swift; sourceTree = "<group>"; };
 		B6A24577280561A000490CD3 /* iOSLoggerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSLoggerUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		B6A2458E28056A6400490CD3 /* SidebarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidebarViewController.swift; sourceTree = "<group>"; };
-		B6A2459028056A7100490CD3 /* SidebarMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidebarMenu.swift; sourceTree = "<group>"; };
 		B6E43A022806D4A200659D9D /* LogMessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogMessageModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -159,26 +155,25 @@
 		B6A24584280561F600490CD3 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				B6A2458D28056A4000490CD3 /* Sidebar */,
-				B6A24585280561FD00490CD3 /* MainWindow */,
+				B6A24585280561FD00490CD3 /* LogContent */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
 		};
-		B6A24585280561FD00490CD3 /* MainWindow */ = {
+		B6A24585280561FD00490CD3 /* LogContent */ = {
 			isa = PBXGroup;
 			children = (
 				B6A245882805623100490CD3 /* ViewModel */,
 				B6A245872805622600490CD3 /* Model */,
 				B6A245862805621D00490CD3 /* View */,
 			);
-			path = MainWindow;
+			path = LogContent;
 			sourceTree = "<group>";
 		};
 		B6A245862805621D00490CD3 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				B6A24558280561A000490CD3 /* MainViewController.swift */,
+				B6A24558280561A000490CD3 /* LogContentViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -213,15 +208,6 @@
 				B6A24556280561A000490CD3 /* AppDelegate.swift */,
 			);
 			path = Delegate;
-			sourceTree = "<group>";
-		};
-		B6A2458D28056A4000490CD3 /* Sidebar */ = {
-			isa = PBXGroup;
-			children = (
-				B6A2458E28056A6400490CD3 /* SidebarViewController.swift */,
-				B6A2459028056A7100490CD3 /* SidebarMenu.swift */,
-			);
-			path = Sidebar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -359,11 +345,9 @@
 				B6E43A032806D4A200659D9D /* LogMessageModel.swift in Sources */,
 				B6A2455C280561A000490CD3 /* iOSLogger.xcdatamodeld in Sources */,
 				B6A193EF2806C23B00CC44F4 /* LogLine.swift in Sources */,
-				B6A24559280561A000490CD3 /* MainViewController.swift in Sources */,
-				B6A2459128056A7100490CD3 /* SidebarMenu.swift in Sources */,
+				B6A24559280561A000490CD3 /* LogContentViewController.swift in Sources */,
 				B6A24557280561A000490CD3 /* AppDelegate.swift in Sources */,
 				B63017EB28057B9F005E47A8 /* LogConsoleHelper.swift in Sources */,
-				B6A2458F28056A6400490CD3 /* SidebarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -548,6 +532,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.twizzyindy.iOSLogger;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -573,6 +558,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.twizzyindy.iOSLogger;
 				PRODUCT_NAME = "$(TARGET_NAME)";

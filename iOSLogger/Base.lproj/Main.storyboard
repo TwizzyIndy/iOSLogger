@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
+        <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="19529"/>
         <capability name="NSView safe area layout guides" minToolsVersion="12.0"/>
         <capability name="Search Toolbar Item" minToolsVersion="12.0" minSystemVersion="11.0"/>
@@ -693,7 +694,7 @@
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
                         <toolbar key="toolbar" implicitIdentifier="181806EE-BB7B-4C70-AC89-D31EE6F8D6BC" autosavesConfiguration="NO" displayMode="iconAndLabel" sizeMode="regular" id="G66-vt-q8Y">
                             <allowedToolbarItems>
-                                <searchToolbarItem implicitItemIdentifier="C2858CDD-238A-4276-8E59-F4D03FB7A754" label="" paletteLabel="Search" visibilityPriority="1001" id="KhM-gX-IeV">
+                                <searchToolbarItem implicitItemIdentifier="C2858CDD-238A-4276-8E59-F4D03FB7A754" explicitItemIdentifier="searchBarId" label="" paletteLabel="Search" visibilityPriority="1001" id="KhM-gX-IeV">
                                     <nil key="toolTip"/>
                                     <searchField key="view" verticalHuggingPriority="750" textCompletion="NO" id="TtW-vO-ka1">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="21"/>
@@ -730,19 +731,19 @@
         <!--Main View Controller-->
         <scene sceneID="e6f-Rd-1ez">
             <objects>
-                <viewController id="Tez-HI-o55" customClass="MainViewController" customModule="iOSLogger" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" id="DrO-6F-nHx">
-                        <rect key="frame" x="0.0" y="0.0" width="677" height="570"/>
+                <viewController id="Tez-HI-o55" customClass="LogContentViewController" customModule="iOSLogger" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" misplaced="YES" id="DrO-6F-nHx">
+                        <rect key="frame" x="0.0" y="0.0" width="677" height="593"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <scrollView autohidesScrollers="YES" horizontalLineScroll="24" horizontalPageScroll="10" verticalLineScroll="24" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m50-6v-22P">
-                                <rect key="frame" x="0.0" y="0.0" width="677" height="570"/>
+                                <rect key="frame" x="0.0" y="0.0" width="677" height="593"/>
                                 <clipView key="contentView" id="b6T-Sa-7cN">
-                                    <rect key="frame" x="1" y="1" width="675" height="568"/>
+                                    <rect key="frame" x="1" y="1" width="675" height="591"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" multipleSelection="NO" autosaveColumns="NO" rowHeight="24" usesAutomaticRowHeights="YES" headerView="JfL-Up-e4s" viewBased="YES" id="z4A-Y9-3st">
-                                            <rect key="frame" x="0.0" y="0.0" width="675" height="540"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="675" height="563"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <size key="intercellSpacing" width="17" height="0.0"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>

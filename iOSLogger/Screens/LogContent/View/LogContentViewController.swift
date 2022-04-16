@@ -1,5 +1,5 @@
 //
-//  MainViewController.swift
+//  LogContentViewController.swift
 //  iOSLogger
 //
 //  Created by Aung Khant M. on 12/04/2022.
@@ -7,7 +7,7 @@
 
 import Cocoa
 
-class MainViewController: NSViewController {
+class LogContentViewController: NSViewController {
     
     //MARK: - IBOutlets
     @IBOutlet weak var tableView: NSTableView!
@@ -81,7 +81,7 @@ class MainViewController: NSViewController {
 }
 
 //MARK: - NSTableView extensions
-extension MainViewController: NSTableViewDelegate, NSTableViewDataSource {
+extension LogContentViewController: NSTableViewDelegate, NSTableViewDataSource {
     
     func numberOfRows(in tableView: NSTableView) -> Int {
         self.logMessageList?.count ?? 0
