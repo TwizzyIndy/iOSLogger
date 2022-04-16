@@ -731,18 +731,18 @@
         <scene sceneID="e6f-Rd-1ez">
             <objects>
                 <viewController id="Tez-HI-o55" customClass="MainViewController" customModule="iOSLogger" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" misplaced="YES" id="DrO-6F-nHx">
-                        <rect key="frame" x="0.0" y="0.0" width="677" height="547"/>
+                    <view key="view" id="DrO-6F-nHx">
+                        <rect key="frame" x="0.0" y="0.0" width="677" height="570"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <scrollView autohidesScrollers="YES" horizontalLineScroll="24" horizontalPageScroll="10" verticalLineScroll="24" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m50-6v-22P">
-                                <rect key="frame" x="20" y="20" width="637" height="531"/>
+                                <rect key="frame" x="0.0" y="0.0" width="677" height="570"/>
                                 <clipView key="contentView" id="b6T-Sa-7cN">
-                                    <rect key="frame" x="1" y="1" width="635" height="529"/>
+                                    <rect key="frame" x="1" y="1" width="675" height="568"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" multipleSelection="NO" autosaveColumns="NO" rowHeight="24" usesAutomaticRowHeights="YES" headerView="JfL-Up-e4s" viewBased="YES" id="z4A-Y9-3st">
-                                            <rect key="frame" x="0.0" y="0.0" width="635" height="501"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="675" height="540"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <size key="intercellSpacing" width="17" height="0.0"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -896,16 +896,16 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <tableHeaderView key="headerView" wantsLayer="YES" id="JfL-Up-e4s">
-                                    <rect key="frame" x="0.0" y="0.0" width="635" height="28"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="675" height="28"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableHeaderView>
                             </scrollView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="m50-6v-22P" firstAttribute="leading" secondItem="Igt-xH-dwJ" secondAttribute="leading" id="CNl-zF-UZf"/>
-                            <constraint firstItem="m50-6v-22P" firstAttribute="bottom" secondItem="Igt-xH-dwJ" secondAttribute="bottom" id="OSM-PS-euO"/>
-                            <constraint firstItem="m50-6v-22P" firstAttribute="trailing" secondItem="Igt-xH-dwJ" secondAttribute="trailing" id="uLy-2c-cvb"/>
-                            <constraint firstItem="m50-6v-22P" firstAttribute="top" secondItem="DrO-6F-nHx" secondAttribute="top" constant="20" symbolic="YES" id="wFX-9e-cSb"/>
+                            <constraint firstItem="m50-6v-22P" firstAttribute="trailing" secondItem="g2X-xu-oF9" secondAttribute="trailing" id="31j-4R-4xg"/>
+                            <constraint firstItem="m50-6v-22P" firstAttribute="top" secondItem="DrO-6F-nHx" secondAttribute="top" id="MMZ-SK-CvX"/>
+                            <constraint firstItem="m50-6v-22P" firstAttribute="leading" secondItem="g2X-xu-oF9" secondAttribute="leading" id="PTp-y0-0A3"/>
+                            <constraint firstItem="m50-6v-22P" firstAttribute="bottom" secondItem="g2X-xu-oF9" secondAttribute="bottom" id="kaW-4g-JEo"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="g2X-xu-oF9"/>
                         <viewLayoutGuide key="layoutMargins" id="Igt-xH-dwJ"/>
@@ -916,7 +916,7 @@
                 </viewController>
                 <customObject id="MZo-TT-8dE" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-99" y="1069"/>
+            <point key="canvasLocation" x="-99.5" y="1068.5"/>
         </scene>
     </scenes>
 </document>
