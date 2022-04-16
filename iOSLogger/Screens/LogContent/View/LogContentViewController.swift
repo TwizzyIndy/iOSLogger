@@ -13,8 +13,22 @@ class LogContentViewController: NSViewController {
     @IBOutlet weak var tableView: NSTableView!
     
     //MARK: - Properties
-    var logMessageList : [LogMessageModel]?
+    var logMessageList : [LogMessageModel] = []
+    
+    var searchedResultsList : [LogMessageModel]?
+    
     var consoleHelper : LogConsoleHelper!
+    
+    //MARK: UI States
+    enum SearchState {
+        case regularSearch
+        case notRegularSearchYet
+        case noResults
+        case discoverySearch
+    }
+    
+    private var stateOfSearch: SearchState = .discoverySearch
+    private var textToSearch = ""
     
     //MARK: - VC LifeCycles
     override func viewDidLoad() {
@@ -27,7 +41,15 @@ class LogContentViewController: NSViewController {
             
             let line = LogLine(logMessage: text)
             if let msg = line.messageModel {
-                self.logMessageList?.append(msg)
+                
+                // if searching, just add contained search result into table
+                if self.stateOfSearch == .regularSearch {
+                    if msg.messageDetail.contains(self.textToSearch) {
+                        self.searchedResultsList?.append(msg)
+                    }
+                }
+                
+                self.logMessageList.append(msg)
                 
                 // we should have to re-select the row
                 let selectedRow = tableView?.selectedRowIndexes
@@ -45,7 +67,14 @@ class LogContentViewController: NSViewController {
             let line = LogLine(logMessage: text)
             if let msg = line.messageModel {
                 
-                self.logMessageList?.append(msg)
+                // if searching, just add contained search result into table
+                if self.stateOfSearch == .regularSearch {
+                    if msg.messageDetail.contains(self.textToSearch) {
+                        self.searchedResultsList?.append(msg)
+                    }
+                }
+                
+                self.logMessageList.append(msg)
                 
                 // we should have to re-select the row
                 let selectedRow = tableView?.selectedRowIndexes
@@ -74,6 +103,34 @@ class LogContentViewController: NSViewController {
         // Update the view, if already loaded.
         }
     }
+    
+    func searchAndDisplayItems(matching query: String)
+    {
+        let result = self.logMessageList.filter {
+            $0.messageDetail.contains(query)
+        }
+        
+        self.stateOfSearch = result.count > 0 ? .regularSearch : .noResults
+        
+        if self.stateOfSearch == .regularSearch {
+            self.searchedResultsList = result
+            self.tableView.reloadData()
+        }
+        
+    }
+    
+    @objc public func procSearchFieldInput (sender:NSSearchField) {
+        print ("\(#function): \(sender.stringValue)")
+        
+        if !sender.stringValue.isEmpty{
+            self.textToSearch = sender.stringValue
+            searchAndDisplayItems(matching: sender.stringValue)
+        } else {
+            self.stateOfSearch = .notRegularSearchYet
+            self.textToSearch = ""
+            self.searchedResultsList = nil
+        }
+    }
 
     deinit {
         
@@ -84,7 +141,9 @@ class LogContentViewController: NSViewController {
 extension LogContentViewController: NSTableViewDelegate, NSTableViewDataSource {
     
     func numberOfRows(in tableView: NSTableView) -> Int {
-        self.logMessageList?.count ?? 0
+        let logMessageList = self.stateOfSearch == .regularSearch ? self.searchedResultsList : self.logMessageList
+
+        return logMessageList?.count ?? 0
     }
     
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
@@ -92,21 +151,26 @@ extension LogContentViewController: NSTableViewDelegate, NSTableViewDataSource {
         var text = ""
         var cellIdentifier = ""
         
-        guard let model = self.logMessageList?[row] else {
+        let logMessageList = self.stateOfSearch == .regularSearch ? self.searchedResultsList : self.logMessageList
+        
+        if (logMessageList?.count == 0 )
+        {
             return nil
         }
         
+        let model = logMessageList?[row]
+        
         if tableColumn == tableView.tableColumns[0] {
-            text = "\(model.time)"
+            text = "\(model?.time ?? "N/A")"
             cellIdentifier = "timeCell"
         } else if tableColumn == tableView.tableColumns[1] {
-            text = "\(model.processName)"
+            text = "\(model?.processName ?? "N/A")"
             cellIdentifier = "processCell"
         } else if tableColumn == tableView.tableColumns[2] {
-            text = "\(model.messageDetail)"
+            text = "\(model?.messageDetail ?? "N/A")"
             cellIdentifier = "descriptionCell"
         } else if tableColumn == tableView.tableColumns[3] {
-            text = "\(model.messageType)"
+            text = "\(model?.messageType ?? "N/A")"
             cellIdentifier = "typeCell"
         }
         

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B60F7BB8280A9A24000875DF /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60F7BB7280A9A24000875DF /* MainWindowController.swift */; };
 		B63017EB28057B9F005E47A8 /* LogConsoleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63017EA28057B9F005E47A8 /* LogConsoleHelper.swift */; };
 		B63017EC28057B9F005E47A8 /* LogConsoleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63017EA28057B9F005E47A8 /* LogConsoleHelper.swift */; };
 		B63017EE28057F5A005E47A8 /* LogConsoleHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63017ED28057F5A005E47A8 /* LogConsoleHelperTests.swift */; };
@@ -45,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B60F7BB7280A9A24000875DF /* MainWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
 		B63017EA28057B9F005E47A8 /* LogConsoleHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogConsoleHelper.swift; sourceTree = "<group>"; };
 		B63017ED28057F5A005E47A8 /* LogConsoleHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogConsoleHelperTests.swift; sourceTree = "<group>"; };
 		B63017F02805832A005E47A8 /* TMobileDeviceConsole */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = TMobileDeviceConsole; sourceTree = "<group>"; };
@@ -90,6 +92,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B60F7BB6280A99E2000875DF /* MainWindow */ = {
+			isa = PBXGroup;
+			children = (
+				B60F7BBB280A9A5B000875DF /* Model */,
+				B60F7BBA280A9A54000875DF /* ViewModel */,
+				B60F7BB9280A9A30000875DF /* View */,
+			);
+			path = MainWindow;
+			sourceTree = "<group>";
+		};
+		B60F7BB9280A9A30000875DF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B60F7BB7280A9A24000875DF /* MainWindowController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B60F7BBA280A9A54000875DF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B60F7BBB280A9A5B000875DF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		B63017EF280582EC005E47A8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +189,7 @@
 		B6A24584280561F600490CD3 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				B60F7BB6280A99E2000875DF /* MainWindow */,
 				B6A24585280561FD00490CD3 /* LogContent */,
 			);
 			path = Screens;
@@ -343,6 +378,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6E43A032806D4A200659D9D /* LogMessageModel.swift in Sources */,
+				B60F7BB8280A9A24000875DF /* MainWindowController.swift in Sources */,
 				B6A2455C280561A000490CD3 /* iOSLogger.xcdatamodeld in Sources */,
 				B6A193EF2806C23B00CC44F4 /* LogLine.swift in Sources */,
 				B6A24559280561A000490CD3 /* LogContentViewController.swift in Sources */,
