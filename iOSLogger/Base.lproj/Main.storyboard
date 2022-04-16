@@ -728,7 +728,7 @@
             </objects>
             <point key="canvasLocation" x="-99" y="391"/>
         </scene>
-        <!--Main View Controller-->
+        <!--Log Content View Controller-->
         <scene sceneID="e6f-Rd-1ez">
             <objects>
                 <viewController id="Tez-HI-o55" customClass="LogContentViewController" customModule="iOSLogger" customModuleProvider="target" sceneMemberID="viewController">
