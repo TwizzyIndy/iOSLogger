@@ -26,7 +26,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
-        //TODO: we should close the TMobileDeviceConsole process here
         return true
     }
 
