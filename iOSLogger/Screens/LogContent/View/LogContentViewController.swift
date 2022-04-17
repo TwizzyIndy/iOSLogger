@@ -91,6 +91,12 @@ class LogContentViewController: NSViewController {
         
     }
     
+    override func viewDidDisappear() {
+        // clean up the console helper object
+        // is there any better way?
+        consoleHelper = nil
+    }
+    
     private func setupViews()
     {
         self.logMessageList = [LogMessageModel]()
