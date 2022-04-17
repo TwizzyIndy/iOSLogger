@@ -30,6 +30,8 @@ class LogContentViewController: NSViewController {
     private var stateOfSearch: SearchState = .discoverySearch
     private var textToSearch = ""
     
+    private var selectedRow = 1
+    
     //MARK: - VC LifeCycles
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -101,7 +103,10 @@ class LogContentViewController: NSViewController {
     {
         self.logMessageList = [LogMessageModel]()
         self.tableView.dataSource = self
-        self.tableView.delegate = self        
+        self.tableView.delegate = self
+        
+        self.tableView.target = self
+        self.tableView.action = #selector(self.onTableViewSingleClick)
     }
 
     override var representedObject: Any? {
@@ -142,6 +147,17 @@ class LogContentViewController: NSViewController {
         self.searchedResultsList = [LogMessageModel]()
         self.logMessageList = [LogMessageModel]()
         self.tableView.reloadData()
+    }
+    
+    @objc func onTableViewSingleClick()
+    {
+        // deselect the select row when user clicked
+        if (selectedRow == tableView.clickedRow)
+        {
+            tableView.deselectRow(selectedRow)
+            return
+        }
+        selectedRow = tableView.clickedRow
     }
 
     deinit {
