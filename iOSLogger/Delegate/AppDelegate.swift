@@ -24,6 +24,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationSupportsSecureRestorableState(_ app: NSApplication) -> Bool {
         return true
     }
+    
+    func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
+        //TODO: we should close the TMobileDeviceConsole process here
+        return true
+    }
 
     // MARK: - Core Data stack
 
