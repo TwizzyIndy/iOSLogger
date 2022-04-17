@@ -706,8 +706,14 @@
                                         </searchFieldCell>
                                     </searchField>
                                 </searchToolbarItem>
+                                <toolbarItem implicitItemIdentifier="44653D08-99AD-46F7-823E-F9945409CA7D" explicitItemIdentifier="clearToolbarItemID" label="Clear" paletteLabel="Clear" tag="-1" image="clear" catalog="system" sizingBehavior="auto" id="qgS-l3-ggz">
+                                    <connections>
+                                        <action selector="onTapClearItem:" target="B8D-0N-5wS" id="aHR-kS-UZD"/>
+                                    </connections>
+                                </toolbarItem>
                             </allowedToolbarItems>
                             <defaultToolbarItems>
+                                <toolbarItem reference="qgS-l3-ggz"/>
                                 <searchToolbarItem reference="KhM-gX-IeV"/>
                             </defaultToolbarItems>
                         </toolbar>

@@ -22,4 +22,7 @@ class MainWindowController: NSWindowController {
         searchField.target = logContentViewController
         searchField.action = #selector(LogContentViewController.procSearchFieldInput(sender:))
     }
+    @IBAction func onTapClearItem(_ sender: NSToolbarItem) {
+        logContentViewController.clearTableView()
+    }
 }

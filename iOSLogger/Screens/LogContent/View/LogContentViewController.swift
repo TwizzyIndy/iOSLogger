@@ -137,6 +137,12 @@ class LogContentViewController: NSViewController {
             self.searchedResultsList = nil
         }
     }
+    
+    @objc public func clearTableView() {
+        self.searchedResultsList = [LogMessageModel]()
+        self.logMessageList = [LogMessageModel]()
+        self.tableView.reloadData()
+    }
 
     deinit {
         
