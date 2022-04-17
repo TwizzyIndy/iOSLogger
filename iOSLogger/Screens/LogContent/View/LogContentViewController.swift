@@ -107,7 +107,7 @@ class LogContentViewController: NSViewController {
     func searchAndDisplayItems(matching query: String)
     {
         let result = self.logMessageList.filter {
-            $0.messageDetail.contains(query)
+            $0.messageDetail.contains(query) || $0.processName.contains(query)
         }
         
         self.stateOfSearch = result.count > 0 ? .regularSearch : .noResults
