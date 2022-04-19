@@ -24,6 +24,8 @@
 		B6A2456C280561A000490CD3 /* iOSLoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A2456B280561A000490CD3 /* iOSLoggerTests.swift */; };
 		B6A24576280561A000490CD3 /* iOSLoggerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A24575280561A000490CD3 /* iOSLoggerUITests.swift */; };
 		B6A24578280561A000490CD3 /* iOSLoggerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A24577280561A000490CD3 /* iOSLoggerUITestsLaunchTests.swift */; };
+		B6C7D0CF280EB81400112EA5 /* LogContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C7D0CE280EB81400112EA5 /* LogContentViewModel.swift */; };
+		B6C7D0D0280EB81400112EA5 /* LogContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C7D0CE280EB81400112EA5 /* LogContentViewModel.swift */; };
 		B6E43A032806D4A200659D9D /* LogMessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E43A022806D4A200659D9D /* LogMessageModel.swift */; };
 		B6E43A042806D4A200659D9D /* LogMessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E43A022806D4A200659D9D /* LogMessageModel.swift */; };
 /* End PBXBuildFile section */
@@ -64,6 +66,7 @@
 		B6A24571280561A000490CD3 /* iOSLoggerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSLoggerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6A24575280561A000490CD3 /* iOSLoggerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSLoggerUITests.swift; sourceTree = "<group>"; };
 		B6A24577280561A000490CD3 /* iOSLoggerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSLoggerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B6C7D0CE280EB81400112EA5 /* LogContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogContentViewModel.swift; sourceTree = "<group>"; };
 		B6E43A022806D4A200659D9D /* LogMessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogMessageModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -225,6 +228,7 @@
 		B6A245882805623100490CD3 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				B6C7D0CE280EB81400112EA5 /* LogContentViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -382,6 +386,7 @@
 				B6A2455C280561A000490CD3 /* iOSLogger.xcdatamodeld in Sources */,
 				B6A193EF2806C23B00CC44F4 /* LogLine.swift in Sources */,
 				B6A24559280561A000490CD3 /* LogContentViewController.swift in Sources */,
+				B6C7D0CF280EB81400112EA5 /* LogContentViewModel.swift in Sources */,
 				B6A24557280561A000490CD3 /* AppDelegate.swift in Sources */,
 				B63017EB28057B9F005E47A8 /* LogConsoleHelper.swift in Sources */,
 			);
@@ -396,6 +401,7 @@
 				B63017EC28057B9F005E47A8 /* LogConsoleHelper.swift in Sources */,
 				B6A193F02806C23B00CC44F4 /* LogLine.swift in Sources */,
 				B6A193F22806CBCD00CC44F4 /* LogLineTests.swift in Sources */,
+				B6C7D0D0280EB81400112EA5 /* LogContentViewModel.swift in Sources */,
 				B6A2456C280561A000490CD3 /* iOSLoggerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
