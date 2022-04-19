@@ -63,6 +63,20 @@ final class LogConsoleHelper
         stdErr.fileHandleForReading.waitForDataInBackgroundAndNotify()
     }
     
+    func pause()
+    {
+        if self.process.isRunning {
+            self.process.suspend()
+        }
+    }
+    
+    func resume()
+    {
+        if self.process.isRunning {
+            self.process.resume()
+        }
+    }
+    
     deinit {
         self.process.terminate()
         

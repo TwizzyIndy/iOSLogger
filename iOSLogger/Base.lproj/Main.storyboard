@@ -711,8 +711,16 @@
                                         <action selector="onTapClearItem:" target="B8D-0N-5wS" id="aHR-kS-UZD"/>
                                     </connections>
                                 </toolbarItem>
+                                <toolbarItem implicitItemIdentifier="922B7833-8BA6-494C-85BD-DD0491411761" explicitItemIdentifier="pauseToolbarItem" label="Pause" paletteLabel="Pause" tag="-1" image="pause.circle" id="4qN-62-2qc">
+                                    <size key="minSize" width="22" height="22"/>
+                                    <size key="maxSize" width="22" height="22"/>
+                                    <connections>
+                                        <action selector="onTapPauseItem:" target="B8D-0N-5wS" id="Pr8-Xj-PN1"/>
+                                    </connections>
+                                </toolbarItem>
                             </allowedToolbarItems>
                             <defaultToolbarItems>
+                                <toolbarItem reference="4qN-62-2qc"/>
                                 <toolbarItem reference="qgS-l3-ggz"/>
                                 <searchToolbarItem reference="KhM-gX-IeV"/>
                             </defaultToolbarItems>
@@ -722,6 +730,7 @@
                         </connections>
                     </window>
                     <connections>
+                        <outlet property="pauseToolbarItem" destination="4qN-62-2qc" id="7tr-SV-T3a"/>
                         <outlet property="searchField" destination="TtW-vO-ka1" id="YCj-QZ-04z"/>
                         <segue destination="Tez-HI-o55" kind="relationship" relationship="window.shadowedContentViewController" id="bwl-yu-uZ0"/>
                     </connections>
@@ -739,13 +748,13 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <scrollView autohidesScrollers="YES" horizontalLineScroll="24" horizontalPageScroll="10" verticalLineScroll="24" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m50-6v-22P">
-                                <rect key="frame" x="0.0" y="0.0" width="677" height="961"/>
+                                <rect key="frame" x="0.0" y="0.0" width="677" height="1306"/>
                                 <clipView key="contentView" id="b6T-Sa-7cN">
-                                    <rect key="frame" x="1" y="1" width="675" height="959"/>
+                                    <rect key="frame" x="1" y="1" width="675" height="1304"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" multipleSelection="NO" autosaveColumns="NO" rowHeight="24" usesAutomaticRowHeights="YES" headerView="JfL-Up-e4s" viewBased="YES" id="z4A-Y9-3st">
-                                            <rect key="frame" x="0.0" y="0.0" width="675" height="931"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="675" height="1276"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <size key="intercellSpacing" width="17" height="0.0"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -922,4 +931,8 @@
             <point key="canvasLocation" x="-99.5" y="1068.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="clear" catalog="system" width="15" height="14"/>
+        <image name="pause.circle" width="40" height="40"/>
+    </resources>
 </document>

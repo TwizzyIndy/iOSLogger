@@ -149,6 +149,21 @@ class LogContentViewController: NSViewController {
         self.tableView.reloadData()
     }
     
+    @objc func pauseConsoleHelper() {
+        if ( consoleHelper != nil )
+        {
+            consoleHelper.pause()
+        }
+    }
+    
+    @objc func resumeConsoleHelper()
+    {
+        if ( consoleHelper != nil )
+        {
+            consoleHelper.resume()
+        }
+    }
+    
     @objc func onTableViewSingleClick()
     {
         // deselect the select row when user clicked
