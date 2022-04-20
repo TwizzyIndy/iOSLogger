@@ -78,6 +78,8 @@ class LogContentViewController: NSViewController {
         }
     }
     
+    // MARK: - Objective-C Functions
+    
     @objc public func procSearchFieldInput (sender:NSSearchField) {
         print ("\(#function): \(sender.stringValue)")
         
@@ -122,6 +124,64 @@ class LogContentViewController: NSViewController {
         }
         selectedRow = tableView.clickedRow
     }
+    
+    @objc func actionCopyMenuItem(_ sender: NSMenuItem)
+    {
+        print(#function)
+        let clickedRow = self.tableView.clickedRow
+        
+        var description = "", time = "", processName = "", processType = "", parentProcess = "", pid = ""
+        
+        // time cell
+        if let rowView = tableView.rowView(atRow: clickedRow, makeIfNecessary: false) {
+            if let cellView = rowView.view(atColumn: 0) as? NSTableCellView {
+                time = cellView.textField?.stringValue ?? "None"
+            }
+        }
+        
+        // process cell
+        if let rowView = tableView.rowView(atRow: clickedRow, makeIfNecessary: false) {
+            if let cellView = rowView.view(atColumn: 1) as? NSTableCellView {
+                processName = cellView.textField?.stringValue ?? "None"
+            }
+        }
+        
+        // description cell
+        if let rowView = tableView.rowView(atRow: clickedRow, makeIfNecessary: false) {
+            if let cellView = rowView.view(atColumn: 2) as? NSTableCellView {
+                description = cellView.textField?.stringValue ?? "None"
+            }
+        }
+        
+        // type cell
+        if let rowView = tableView.rowView(atRow: clickedRow, makeIfNecessary: false) {
+            if let cellView = rowView.view(atColumn: 3) as? NSTableCellView {
+                processType = cellView.textField?.stringValue ?? "None"
+            }
+        }
+        
+        // parent cell
+        
+        if let rowView = tableView.rowView(atRow: clickedRow, makeIfNecessary: false) {
+            if let cellView = rowView.view(atColumn: 4) as? NSTableCellView {
+                parentProcess = cellView.textField?.stringValue ?? "None"
+            }
+        }
+        
+        // pid cell
+        if let rowView = tableView.rowView(atRow: clickedRow, makeIfNecessary: false) {
+            if let cellView = rowView.view(atColumn: 5) as? NSTableCellView {
+                pid = cellView.textField?.stringValue ?? "None"
+            }
+        }
+        
+        let contentString = "\(time) \(processName)(\(parentProcess))[\(pid)] \(processType): \(description)"
+        
+        // copy to pasteboard
+        let pasteboard = NSPasteboard.general
+        pasteboard.declareTypes([.string], owner: nil)
+        pasteboard.setString(contentString, forType: .string)
+    }
 
     deinit {
         
@@ -134,6 +194,23 @@ extension LogContentViewController: NSTableViewDelegate, NSTableViewDataSource {
     func numberOfRows(in tableView: NSTableView) -> Int {
         let logMessageList = self.viewModel.stateOfSearch == .regularSearch ? self.viewModel.searchedResultsList : self.viewModel.logMessageList
         return logMessageList?.count ?? 0
+    }
+    
+    override func rightMouseDown(with event: NSEvent) {
+        // Add popup menu
+        // https://developer.apple.com/forums/thread/658198
+        let copyMenu = copyContextMenu()
+        NSMenu.popUpContextMenu(copyMenu, with: event, for: self.tableView) // returns a selected value
+    }
+    
+    func copyContextMenu() -> NSMenu {
+        let theMenu = NSMenu(title: "ContextMenu")
+        theMenu.autoenablesItems = false
+        
+        let copyMenuItem = NSMenuItem(title: "Copy", action: #selector(actionCopyMenuItem(_:)), keyEquivalent: "")
+        
+        theMenu.addItem(copyMenuItem)
+        return theMenu
     }
     
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
