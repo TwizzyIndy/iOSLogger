@@ -162,6 +162,12 @@ extension LogContentViewController: NSTableViewDelegate, NSTableViewDataSource {
         } else if tableColumn == tableView.tableColumns[3] {
             text = "\(model?.messageType ?? "N/A")"
             cellIdentifier = "typeCell"
+        } else if tableColumn == tableView.tableColumns[4] {
+            text = "\(model?.parentProcessName ?? "N/A")"
+            cellIdentifier = "parentProcessCell"
+        } else if tableColumn == tableView.tableColumns[5] {
+            text = "\(model?.processPID ?? "N/A")"
+            cellIdentifier = "processPIDCell"
         }
         
         if let cell = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: cellIdentifier), owner: nil) as? NSTableCellView {

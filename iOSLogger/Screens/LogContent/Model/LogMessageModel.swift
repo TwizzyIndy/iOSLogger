@@ -15,4 +15,6 @@ struct LogMessageModel {
     let processName: String
     let messageType: String
     let messageDetail: String
+    let parentProcessName: String
+    let processPID: String
 }
