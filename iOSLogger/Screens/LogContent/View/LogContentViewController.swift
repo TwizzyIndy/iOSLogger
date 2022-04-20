@@ -127,7 +127,6 @@ class LogContentViewController: NSViewController {
     
     @objc func actionCopyMenuItem(_ sender: NSMenuItem)
     {
-        print(#function)
         let clickedRow = self.tableView.clickedRow
         
         var description = "", time = "", processName = "", processType = "", parentProcess = "", pid = ""
