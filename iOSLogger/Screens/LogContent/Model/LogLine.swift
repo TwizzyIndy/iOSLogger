@@ -39,6 +39,9 @@ struct LogLine {
                     let deviceNameStr = String(logMessage[fourthRange])
                     let processNameStr = String(logMessage[fifthRange]) // parse PID. e.g: bluetoothd(IOKit)[85]
                     
+                    // the exact process name
+                    let exactProcessName = getExactProcessNameWithRegex(processNameStr)
+                    
                     // parse parent process name
                     let parentProcessName = self.getParentProcessNameWithRegex(processNameStr)
                     
@@ -49,7 +52,7 @@ struct LogLine {
                     let messageDetailStr = String(logMessage[seventhRange])
                     
                     
-                    let model = LogMessageModel(month: monthStr, day: dayStr, time: timeStr, deviceName: deviceNameStr, processName: processNameStr, messageType: messageTypeStr, messageDetail: messageDetailStr, parentProcessName: parentProcessName ?? "N/A", processPID: processPID ?? "N/A")
+                    let model = LogMessageModel(month: monthStr, day: dayStr, time: timeStr, deviceName: deviceNameStr, processName: exactProcessName ?? "N/A", messageType: messageTypeStr, messageDetail: messageDetailStr, parentProcessName: parentProcessName ?? "N/A", processPID: processPID ?? "N/A")
                     
                     self.messageModel = model
                     
@@ -63,6 +66,40 @@ struct LogLine {
         }
         
 
+    }
+    
+    private func getExactProcessNameWithRegex(_ processName: String) -> String?
+    {
+        var result : String? = nil
+        
+        // remove string between the brackets
+        let newProcessName = processName.replacingOccurrences(of: #"\[.*?\]"#, with: "", options: .regularExpression)
+        result = newProcessName
+        
+        let pattern = #"(.*?)\("#
+        
+        do {
+            let regex = try NSRegularExpression(pattern: pattern, options: [])
+            let nsrange = NSRange(newProcessName.startIndex..<newProcessName.endIndex, in: newProcessName)
+            
+            regex.enumerateMatches(in: newProcessName, options: [], range: nsrange) { (match, _, stop) in
+                guard let match = match else {
+                    return
+                }
+                
+                if match.numberOfRanges == 2,
+                   let firstCaptureRange = Range(match.range(at: 1), in: newProcessName)
+                {
+                    let capturedValue = String(newProcessName[firstCaptureRange])
+                    result = capturedValue
+                }
+
+            }
+
+        } catch {
+            print("error in regex")
+        }
+        return result
     }
     
     private func getParentProcessNameWithRegex(_ processName: String) -> String?
