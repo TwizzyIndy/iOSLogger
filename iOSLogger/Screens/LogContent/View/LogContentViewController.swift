@@ -19,7 +19,7 @@ class LogContentViewController: NSViewController {
     }()
     
     //MARK: UI States
-    private var selectedRow = 1
+    private var selectedRow : Int? = nil
     
     //MARK: - VC LifeCycles
     override func viewDidLoad() {
@@ -119,7 +119,8 @@ class LogContentViewController: NSViewController {
         // deselect the select row when user clicked
         if (selectedRow == tableView.clickedRow)
         {
-            tableView.deselectRow(selectedRow)
+            tableView.deselectRow(selectedRow ?? 0)
+            selectedRow = nil
             return
         }
         selectedRow = tableView.clickedRow
