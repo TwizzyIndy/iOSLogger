@@ -20,6 +20,7 @@ class LogContentViewController: NSViewController {
     
     //MARK: UI States
     private var selectedRow : Int? = nil
+    private var isAutoScrollEnabled = false
     
     //MARK: - VC LifeCycles
     override func viewDidLoad() {
@@ -54,13 +55,22 @@ class LogContentViewController: NSViewController {
         
         // reload tableview closures
         viewModel.reloadTableViewWithReselect = { [weak self] in
-            let selectedRow = self?.tableView?.selectedRowIndexes
+            guard let strongSelf = self else { return }
+            
+            let selectedRow = strongSelf.tableView?.selectedRowIndexes
             
             DispatchQueue.main.async {
-                self?.tableView?.reloadData()
+                strongSelf.tableView?.reloadData()
                 
                 if let x = selectedRow {
-                    self?.tableView?.selectRowIndexes(x, byExtendingSelection: false)
+                    strongSelf.tableView?.selectRowIndexes(x, byExtendingSelection: false)
+                }
+                
+                // scroll to added row
+                if(strongSelf.isAutoScrollEnabled)
+                {
+                    let numberOfRows = strongSelf.tableView.numberOfRows
+                    strongSelf.tableView.scrollRowToVisible(numberOfRows - 1)
                 }
             }
         }
@@ -90,6 +100,18 @@ class LogContentViewController: NSViewController {
             self.viewModel.stateOfSearch = .notRegularSearchYet
             self.viewModel.textToSearch = ""
             self.viewModel.searchedResultsList = nil
+        }
+    }
+    
+    @objc public func procAutoScrollToolbarItem(sender: NSToolbarItem)
+    {
+        if (isAutoScrollEnabled)
+        {
+            sender.toolbar?.selectedItemIdentifier = nil
+            isAutoScrollEnabled = false
+        } else {
+            sender.toolbar?.selectedItemIdentifier = NSToolbarItem.Identifier(rawValue: "autoScroll")
+            isAutoScrollEnabled = true
         }
     }
     

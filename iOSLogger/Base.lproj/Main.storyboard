@@ -716,8 +716,10 @@
                                         <action selector="onTapPauseItem:" target="B8D-0N-5wS" id="Pr8-Xj-PN1"/>
                                     </connections>
                                 </toolbarItem>
+                                <toolbarItem implicitItemIdentifier="D01115BD-D8A5-47B3-B560-AAA207B1A52F" explicitItemIdentifier="autoScroll" label="Auto-Scroll" paletteLabel="Auto-Scroll" tag="-1" image="icons8-webpage-scrolling-down" bordered="YES" sizingBehavior="auto" selectable="YES" id="To7-i3-36C"/>
                             </allowedToolbarItems>
                             <defaultToolbarItems>
+                                <toolbarItem reference="To7-i3-36C"/>
                                 <toolbarItem reference="4qN-62-2qc"/>
                                 <toolbarItem reference="qgS-l3-ggz"/>
                                 <searchToolbarItem reference="KhM-gX-IeV"/>
@@ -728,6 +730,7 @@
                         </connections>
                     </window>
                     <connections>
+                        <outlet property="autoScrollToolbarItem" destination="To7-i3-36C" id="oQO-As-7Jw"/>
                         <outlet property="pauseToolbarItem" destination="4qN-62-2qc" id="7tr-SV-T3a"/>
                         <outlet property="searchField" destination="TtW-vO-ka1" id="YCj-QZ-04z"/>
                         <segue destination="Tez-HI-o55" kind="relationship" relationship="window.shadowedContentViewController" id="bwl-yu-uZ0"/>
@@ -1016,6 +1019,7 @@
     </scenes>
     <resources>
         <image name="clear" catalog="system" width="15" height="14"/>
+        <image name="icons8-webpage-scrolling-down" width="40" height="40"/>
         <image name="pause.circle" width="40" height="40"/>
     </resources>
 </document>

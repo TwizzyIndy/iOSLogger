@@ -19,6 +19,7 @@ class MainWindowController: NSWindowController {
     // MARK: - IBOutlets
     @IBOutlet weak var searchField: NSSearchField!
     @IBOutlet weak var pauseToolbarItem: NSToolbarItem!
+    @IBOutlet weak var autoScrollToolbarItem: NSToolbarItem!
     
     // MARK: - Life cycles
     override func windowDidLoad() {
@@ -26,6 +27,10 @@ class MainWindowController: NSWindowController {
         
         searchField.target = logContentViewController
         searchField.action = #selector(LogContentViewController.procSearchFieldInput(sender:))
+        
+        // for autoscroll toolbar item
+        autoScrollToolbarItem.target = logContentViewController
+        autoScrollToolbarItem.action = #selector(logContentViewController.procAutoScrollToolbarItem)
     }
     
     // MARK: - IB Actions
