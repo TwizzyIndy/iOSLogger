@@ -18,7 +18,6 @@
 		B6A193F22806CBCD00CC44F4 /* LogLineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A193F12806CBCD00CC44F4 /* LogLineTests.swift */; };
 		B6A24557280561A000490CD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A24556280561A000490CD3 /* AppDelegate.swift */; };
 		B6A24559280561A000490CD3 /* LogContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A24558280561A000490CD3 /* LogContentViewController.swift */; };
-		B6A2455C280561A000490CD3 /* iOSLogger.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B6A2455A280561A000490CD3 /* iOSLogger.xcdatamodeld */; };
 		B6A2455E280561A000490CD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6A2455D280561A000490CD3 /* Assets.xcassets */; };
 		B6A24561280561A000490CD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6A2455F280561A000490CD3 /* Main.storyboard */; };
 		B6A2456C280561A000490CD3 /* iOSLoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A2456B280561A000490CD3 /* iOSLoggerTests.swift */; };
@@ -57,7 +56,6 @@
 		B6A24553280561A000490CD3 /* iOSLogger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSLogger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6A24556280561A000490CD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6A24558280561A000490CD3 /* LogContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogContentViewController.swift; sourceTree = "<group>"; };
-		B6A2455B280561A000490CD3 /* iOSLogger.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iOSLogger.xcdatamodel; sourceTree = "<group>"; };
 		B6A2455D280561A000490CD3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B6A24560280561A000490CD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B6A24562280561A000490CD3 /* iOSLogger.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iOSLogger.entitlements; sourceTree = "<group>"; };
@@ -165,7 +163,6 @@
 				B6A2455D280561A000490CD3 /* Assets.xcassets */,
 				B6A2455F280561A000490CD3 /* Main.storyboard */,
 				B6A24562280561A000490CD3 /* iOSLogger.entitlements */,
-				B6A2455A280561A000490CD3 /* iOSLogger.xcdatamodeld */,
 			);
 			path = iOSLogger;
 			sourceTree = "<group>";
@@ -383,7 +380,6 @@
 			files = (
 				B6E43A032806D4A200659D9D /* LogMessageModel.swift in Sources */,
 				B60F7BB8280A9A24000875DF /* MainWindowController.swift in Sources */,
-				B6A2455C280561A000490CD3 /* iOSLogger.xcdatamodeld in Sources */,
 				B6A193EF2806C23B00CC44F4 /* LogLine.swift in Sources */,
 				B6A24559280561A000490CD3 /* LogContentViewController.swift in Sources */,
 				B6C7D0CF280EB81400112EA5 /* LogContentViewModel.swift in Sources */,
@@ -590,9 +586,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = iOSLogger/iOSLogger.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1000;
+				DEVELOPMENT_TEAM = FZK75W47G4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -719,19 +717,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		B6A2455A280561A000490CD3 /* iOSLogger.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				B6A2455B280561A000490CD3 /* iOSLogger.xcdatamodel */,
-			);
-			currentVersion = B6A2455B280561A000490CD3 /* iOSLogger.xcdatamodel */;
-			path = iOSLogger.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = B6A2454B280561A000490CD3 /* Project object */;
 }
