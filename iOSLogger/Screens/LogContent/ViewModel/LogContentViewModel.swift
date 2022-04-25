@@ -41,7 +41,7 @@ class LogContentViewModel: NSObject {
                 
                 // if searching, just add contained search result into table
                 if strongSelf.stateOfSearch == .regularSearch {
-                    if msg.messageDetail.contains(strongSelf.textToSearch) {
+                    if msg.messageDetail.contains(strongSelf.textToSearch) || msg.processName.contains(strongSelf.textToSearch) {
                         strongSelf.searchedResultsList?.append(msg)
                     }
                 }
@@ -60,7 +60,7 @@ class LogContentViewModel: NSObject {
                 
                 // if searching, just add contained search result into table
                 if strongSelf.stateOfSearch == .regularSearch {
-                    if msg.messageDetail.contains(strongSelf.textToSearch) {
+                    if msg.messageDetail.contains(strongSelf.textToSearch) || msg.processName.contains(strongSelf.textToSearch) {
                         strongSelf.searchedResultsList?.append(msg)
                     }
                 }
