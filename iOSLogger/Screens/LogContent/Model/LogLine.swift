@@ -12,7 +12,7 @@ struct LogLine {
     var messageModel: LogMessageModel? = nil
     
     init(logMessage: String) {
-        let pattern = #"(...) (\d\d) (.*?) (.*?) (.*?) (.*?)\: (.*?)\n"#
+        let pattern = #"(...)\s{1,}(\d{1,}) (.*?) (.*?) (.*?) (.*?)\: (.*?)\n"#
         
         do {
             let regex = try NSRegularExpression(pattern: pattern, options: [])
