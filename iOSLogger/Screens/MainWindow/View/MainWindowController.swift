@@ -31,6 +31,18 @@ class MainWindowController: NSWindowController {
         // for autoscroll toolbar item
         autoScrollToolbarItem.target = logContentViewController
         autoScrollToolbarItem.action = #selector(logContentViewController.procAutoScrollToolbarItem)
+        
+        // setup views
+        setupViews()
+    }
+    
+    private func setupViews()
+    {
+        if #available(macOS 11.0, *) {
+            pauseToolbarItem.image = NSImage(systemSymbolName: "pause.circle", accessibilityDescription: nil)
+        } else {
+            pauseToolbarItem.image = NSImage(named: "pause.circle")
+        }
     }
     
     // MARK: - IB Actions
@@ -45,13 +57,23 @@ class MainWindowController: NSWindowController {
             
             isPaused = true
             
-            pauseToolbarItem.image = NSImage(named: "play.circle" )
+            if #available(macOS 11.0, *) {
+                pauseToolbarItem.image = NSImage(systemSymbolName: "play.circle", accessibilityDescription: nil)
+            } else {
+                pauseToolbarItem.image = NSImage(named: "play.circle" )
+            }
+            
             pauseToolbarItem.label = "Resume"
         } else {
             logContentViewController.resumeConsoleHelper()
             isPaused = false
             
-            pauseToolbarItem.image = NSImage(named: "pause.circle" )
+            if #available(macOS 11.0, *) {
+                pauseToolbarItem.image = NSImage(systemSymbolName: "pause.circle", accessibilityDescription: nil)
+            } else {
+                pauseToolbarItem.image = NSImage(named: "pause.circle" )
+            }
+            
             pauseToolbarItem.label = "Pause"
         }
     }

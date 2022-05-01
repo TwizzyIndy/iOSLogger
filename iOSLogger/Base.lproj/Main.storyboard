@@ -711,7 +711,7 @@
                                         <action selector="onTapClearItem:" target="B8D-0N-5wS" id="aHR-kS-UZD"/>
                                     </connections>
                                 </toolbarItem>
-                                <toolbarItem implicitItemIdentifier="922B7833-8BA6-494C-85BD-DD0491411761" explicitItemIdentifier="pauseToolbarItem" label="Pause" paletteLabel="Pause" tag="-1" image="pause.circle" bordered="YES" sizingBehavior="auto" id="4qN-62-2qc">
+                                <toolbarItem implicitItemIdentifier="922B7833-8BA6-494C-85BD-DD0491411761" explicitItemIdentifier="pauseToolbarItem" label="Pause" paletteLabel="Pause" tag="-1" image="pause.circle" catalog="system" bordered="YES" sizingBehavior="auto" id="4qN-62-2qc">
                                     <connections>
                                         <action selector="onTapPauseItem:" target="B8D-0N-5wS" id="Pr8-Xj-PN1"/>
                                     </connections>
@@ -1020,6 +1020,6 @@
     <resources>
         <image name="clear" catalog="system" width="15" height="14"/>
         <image name="icons8-webpage-scrolling-down" width="40" height="40"/>
-        <image name="pause.circle" width="40" height="40"/>
+        <image name="pause.circle" catalog="system" width="15" height="15"/>
     </resources>
 </document>
