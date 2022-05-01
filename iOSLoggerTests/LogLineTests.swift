@@ -38,7 +38,15 @@ class LogLineTests: XCTestCase {
         
         XCTAssert(logLine.messageModel != nil)
         
-        print(logLine.messageModel)
+        print(logLine.messageModel!)
+    }
+    
+    func testLogLineWithOneDigitInDay() throws {
+        let logLine = LogLine(logMessage: "May  2 02:30:04 iPad-Pro-105-inch symptomsd(SymptomEvaluator)[152] <Notice>: L2 Metrics on en0: rssi: -35 [-1,-1] -> -35, snr: 35 (cca [wake/total] self/other/intf): [0,0]/[0,0]/[0,0]/27 (txFrames/txReTx/txFail): 128/17/0 -> (was/is) 0/0\n")
+        
+        XCTAssert(logLine.messageModel != nil)
+        
+        print(logLine.messageModel!)
     }
 
 }
