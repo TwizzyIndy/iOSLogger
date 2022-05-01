@@ -1,8 +1,9 @@
-# iOSLogger
+<div align="center">
+	<img src="imgs/appicon.png" width="128" height="128">
+	<h1>iOS Logger</h1>
+</div>
 
-![](imgs/appicon.png)
-
-Here is the another iOS log console for macOS. I've been using Lemonjar's iOS Console for more than three years. But it's no longer work with iOS devices anymore. It might be one of a dependency issue(may be OpenSSL). So I desided to make this.
+Here is another iOS log console for macOS. I've been using Lemonjar's iOS Console for more than three years. But it's no longer work with iOS devices anymore. It might be one of a dependency issue(may be OpenSSL). So I desided to make this.
 
 ## Download
 
