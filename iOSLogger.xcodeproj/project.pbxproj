@@ -13,6 +13,8 @@
 		B63017EE28057F5A005E47A8 /* LogConsoleHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63017ED28057F5A005E47A8 /* LogConsoleHelperTests.swift */; };
 		B63017F12805832A005E47A8 /* TMobileDeviceConsole in Resources */ = {isa = PBXBuildFile; fileRef = B63017F02805832A005E47A8 /* TMobileDeviceConsole */; };
 		B63017F22805832A005E47A8 /* TMobileDeviceConsole in Resources */ = {isa = PBXBuildFile; fileRef = B63017F02805832A005E47A8 /* TMobileDeviceConsole */; };
+		B69BA52E281F11E1005D7DF3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B69BA52D281F11E1005D7DF3 /* GoogleService-Info.plist */; };
+		B69BA531281F1353005D7DF3 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = B69BA530281F1353005D7DF3 /* FirebaseAnalytics */; };
 		B6A193EF2806C23B00CC44F4 /* LogLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A193EE2806C23B00CC44F4 /* LogLine.swift */; };
 		B6A193F02806C23B00CC44F4 /* LogLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A193EE2806C23B00CC44F4 /* LogLine.swift */; };
 		B6A193F22806CBCD00CC44F4 /* LogLineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A193F12806CBCD00CC44F4 /* LogLineTests.swift */; };
@@ -51,6 +53,7 @@
 		B63017EA28057B9F005E47A8 /* LogConsoleHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogConsoleHelper.swift; sourceTree = "<group>"; };
 		B63017ED28057F5A005E47A8 /* LogConsoleHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogConsoleHelperTests.swift; sourceTree = "<group>"; };
 		B63017F02805832A005E47A8 /* TMobileDeviceConsole */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = TMobileDeviceConsole; sourceTree = "<group>"; };
+		B69BA52D281F11E1005D7DF3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B6A193EE2806C23B00CC44F4 /* LogLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogLine.swift; sourceTree = "<group>"; };
 		B6A193F12806CBCD00CC44F4 /* LogLineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogLineTests.swift; sourceTree = "<group>"; };
 		B6A24553280561A000490CD3 /* iOSLogger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSLogger.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B69BA531281F1353005D7DF3 /* FirebaseAnalytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,6 +167,7 @@
 				B6A2455D280561A000490CD3 /* Assets.xcassets */,
 				B6A2455F280561A000490CD3 /* Main.storyboard */,
 				B6A24562280561A000490CD3 /* iOSLogger.entitlements */,
+				B69BA52D281F11E1005D7DF3 /* GoogleService-Info.plist */,
 			);
 			path = iOSLogger;
 			sourceTree = "<group>";
@@ -262,6 +267,9 @@
 			dependencies = (
 			);
 			name = iOSLogger;
+			packageProductDependencies = (
+				B69BA530281F1353005D7DF3 /* FirebaseAnalytics */,
+			);
 			productName = iOSLogger;
 			productReference = B6A24553280561A000490CD3 /* iOSLogger.app */;
 			productType = "com.apple.product-type.application";
@@ -334,6 +342,9 @@
 				Base,
 			);
 			mainGroup = B6A2454A280561A000490CD3;
+			packageReferences = (
+				B69BA52F281F1353005D7DF3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = B6A24554280561A000490CD3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -353,6 +364,7 @@
 				B6A2455E280561A000490CD3 /* Assets.xcassets in Resources */,
 				B6A24561280561A000490CD3 /* Main.storyboard in Resources */,
 				B63017F12805832A005E47A8 /* TMobileDeviceConsole in Resources */,
+				B69BA52E281F11E1005D7DF3 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -717,6 +729,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B69BA52F281F1353005D7DF3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B69BA530281F1353005D7DF3 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B69BA52F281F1353005D7DF3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B6A2454B280561A000490CD3 /* Project object */;
 }
