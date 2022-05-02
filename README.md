@@ -9,6 +9,8 @@ Here is another iOS log console for macOS. I've been using Lemonjar's iOS Consol
 
 Requires macOS 10.13 and later
 
+- [v1.0.0](https://github.com/TwizzyIndy/iOSLogger/releases/download/1.0.0/iOSLogger_Universal_1.0.0.zip)
+
 
 ## Screenshot
 
